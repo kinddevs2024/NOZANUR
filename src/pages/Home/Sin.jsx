@@ -6,7 +6,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 
-export function Form() {
+export function Sin() {
   const BOT_TOKEN = "7000262508:AAFKSrfSzkomLCl59FRL51x-ggSNqv_k-I4"
   const MY_ID = "6348045547"
   const MY_MOM = "6348045547"
@@ -120,4 +120,4 @@ Masige : ${masiga}
 
 
 
-export default Form
+export default Sin

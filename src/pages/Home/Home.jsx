@@ -1,5 +1,5 @@
 import React from 'react'
-import Form from './form';
+import  {  Sin } from './Sin';
 import {
   Button,
   Dialog,
@@ -7,6 +7,8 @@ import {
   DialogBody,
   DialogFooter,
 } from "@material-tailwind/react";
+import { FormControl } from '@mui/material';
+
 export function Home() {
   const [open, setOpen] = React.useState(false);
 
@@ -22,7 +24,7 @@ export function Home() {
       <Dialog className='text-black dark:text-white dark:bg-black  bg-white *:' open={open} handler={handleOpen}>
         <DialogHeader>kursga qabul qilinish uchun toldiriladigannarsalar</DialogHeader>
         <DialogBody>
-          <Form />
+          <Sin/>
         </DialogBody>
         <DialogFooter>
           <Button
