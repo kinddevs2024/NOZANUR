@@ -1,8 +1,8 @@
-import { Typography , } from "@material-tailwind/react";
+import { Typography, } from "@material-tailwind/react";
 import React from 'react'
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
- 
+
 const LINKS = [
   {
     title: "Product",
@@ -17,17 +17,17 @@ const LINKS = [
     items: ["Blog", "Newsletter", "Events", "Help center"],
   },
 ];
- 
+
 const currentYear = new Date().getFullYear();
- 
+
 export function Footer() {
   return (
     <footer className=" mt-5 relative dark:text-white w-full">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <Typography variant="h5" className="dark:text-white mb-6">  
-            <NavLink to="/product" className="text-gray-300 hover:text-gray-400 dark:text " >
-               Material Tailwind
+          <Typography variant="h5" className="dark:text-white mb-6">
+            <NavLink to="/" className="text-gray-300 hover:text-gray-400 dark:text " >
+              NozaNur
             </NavLink>
           </Typography>
           <div className="grid grid-cols-3 justify-between gap-4">
@@ -57,15 +57,18 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
-          <Typography
-            variant="small"
-            className="mb-4 text-center font-normal text-blue-gray-900 dark:text-white md:mb-0"
-          >
-            &copy; {currentYear} <NavLink to={"/"}>Material Tailwind</NavLink>. All
-            Rights Reserved.
-          </Typography>
+          <a href="https://github.com/kinddevs2024">
+            <Typography
+              variant="small"
+              className="mb-4 text-center font-normal text-blue-gray-900 dark:text-white md:mb-0"
+            >
+              &copy; {currentYear} <a to={"https://github.com/kinddevs2024"}>Kind devs</a>. All
+              Rights Reserved.
+            </Typography>
+          </a>
+
           <div className="flex gap-4 text-blue-gray-900 dark:text-white sm:justify-center">
-            <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+            <Typography as="a" href="https://www.facebook.com/people/Muslima-boutique/100063890390305/" className="opacity-80 transition-opacity hover:opacity-100">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fill-rule="evenodd"
@@ -74,7 +77,7 @@ export function Footer() {
                 />
               </svg>
             </Typography>
-            <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+            <Typography as="a" href="https://www.instagram.com/sadia.lux/" className="opacity-80 transition-opacity hover:opacity-100">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fill-rule="evenodd"
@@ -83,12 +86,13 @@ export function Footer() {
                 />
               </svg>
             </Typography>
-            <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
-              <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+            <Typography as="a" href="https://www.threads.net/@sadia.lux" className="opacity-80 transition-opacity hover:opacity-100">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25" />
               </svg>
+
             </Typography>
-            <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+            <Typography as="a" href="https://github.com/kinddevs2024" className="opacity-80 transition-opacity hover:opacity-100">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fill-rule="evenodd"
@@ -97,7 +101,7 @@ export function Footer() {
                 />
               </svg>
             </Typography>
-            <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
+            <Typography as="a" href="https://yandex.com/maps/-/CDDMjZ7f" className="opacity-80 transition-opacity hover:opacity-100">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   fill-rule="evenodd"
