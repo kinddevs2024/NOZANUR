@@ -1,28 +1,113 @@
-import {  } from 'react'
-import { Route, Routes ,  } from 'react-router-dom'
-import './App.css'
-import Loyaout from './Layout/Loyaout'
-import Home from './pages/Home/Home'
-import Aboute from './pages/About/Aboute'
-import { useState, useEffect } from "react";
-import Eror from './pages/Eror-404/Eror'
+import axios from 'axios';
+import React, { useState } from 'react'
+import {
+  Input,
+  Button,
+  Typography,
+} from "@material-tailwind/react";
+import ThemeToggle from './Layout/ThemeToggle';
 
-function App() {
-  const [theme, setTheme] = useState(() => {
-		const initialTheme = localStorage.getItem("theme");
-		return initialTheme ? initialTheme : "light";
-	});
+const App = () => {
+  const BOT_TOKEN = "7808485169:AAGYT5-H74T35jPFR24U37CfZQsxcnCJBQM"
+  const MY_ID = "6348045547"
+  const MY_MOM = "6348045547"
+  const [name, setName] = useState("")
+  const [tel, setTel] = useState("")
+  const [email, setEmail] = useState("")
+  const [masiga, setMasiga] = useState("")
+
+
+  const sapshenia = `
+    Name : ${name} 
+Tel : ${tel} 
+Email : ${email}
+Masige : ${masiga}
+
+    `
+  const sent_mesj = () => {
+    axios
+      .post(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+        chat_id: MY_MOM,
+        text: sapshenia,
+      })
+      .then((response) => {
+        console.log("Message sent:", response.data);
+      })
+      .catch((error) => {
+        console.error("Error sending message:", error);
+      }).then(() => {
+        window.location.reload()
+      })
+  };
   return (
-    <>
-    <Loyaout >
-      <Routes >
-        <Route  path='/' element={<Home />}/>
-        <Route path='/about' element={ <Aboute/>}/>
-        <Route path='*' element={ <Eror/>}/>
-      </Routes>
-    </Loyaout>
-    </>
+    <div  className='bg-sadia dark:bg-dark-sadia h-screen duration-500' >
+      <div className=" container  h-full  text-black dark:text-white duration-300 flex justify-center items-center  m-auto   gap-4  ">
+        <form className="mt-8 mb-2  w-full flex flex-col">
+          <div className='flex justify-center items-center  w-full rounded-full  mb-5'>
+            <img className=' rounded-full  w-60' src="https://cdn4.cdn-telegram.org/file/BBG1smfHjBJb43lmxYu4Fc8lwUhRFfbHqgcWuV58xHklFx36BHVdgY1551lSq1YojHjLRsdyISGYERKLrKwCsWgBC3zT6uPnJmsN2WCvzBcQdSr6Xawujg1P2icgACGcD19_e8yRjVAt7iu1YGtpjfPEHHrvK01bjJiihc0kh8ncNXPCJoWh_dLzZSqAH9OLJZVd41O2KsCEMCHjasJuGwcxizSf4VrnsQ-ei0zsDQLrTv9U1eo0_um_AVVsmr4gBG5C3X4JQ12lhzMISJjo2Nf8oCyeqO1cAqH4IrU2CAyuyOd66OkmRnxk_4EwWYQTaxlT6r8bPHmfP8NJBWBI0Q.jpg" alt="sadia logo" />
+          </div>
+          <div className=' flex justify-center items-center flex-col gap-5 m-3 '>
+            <div className='flex flex-col  w-full'>
+              <Typography variant="h6" color="blue-gray " className='dark:text-white'>
+                Ismingiz :
+              </Typography>
+              <Input
+                size="lg"
+                type="name"
+                placeholder="Muslima"
+                className=" !border-sadia-text  w-full focus:!border-sadia-text-fucus"
+                labelProps={{
+                  className: "before:content-none after:content-none",
+                }}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div className='flex flex-col  w-full'>
+              <Typography variant="h6" color="blue-gray" className='dark:text-white' >
+                Sizningiz no'mringiz :
+              </Typography>
+              <Input
+                size="lg"
+                type="number"
+                placeholder="+998903464546"
+                className=" !border-sadia-text  focus:!border-sadia-text-fucus"
+                labelProps={{
+                  className: "before:content-none after:content-none",
+                }}
+                value={tel}
+                onChange={(e) => setTel(e.target.value)}
+              />
+            </div>
+
+            <div className=' flex flex-col  w-full'>
+              <Typography variant="h6" color="blue-gray" className='dark:text-white'>
+                Telegram nikingiz :
+              </Typography>
+              <Input
+                type="email"
+                size="lg"
+                placeholder="@Muslimaxon90"
+                className=" !border-sadia-text focus:!border-sadia-text-fucus"
+                labelProps={{
+                  className: "before:content-none after:content-none",
+                }}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            
+          </div>
+          <Button onClick={sent_mesj} className="mt-14   bg-sadia-text  dark:text-white" fullWidth>
+            sign up
+          </Button>
+        </form>
+      </div>
+      <div className=' absolute  top-[5%]  z-50 right-[5%]'>
+        <ThemeToggle />
+      </div>
+    </div>
   )
 }
 
-export default App
+export default App;

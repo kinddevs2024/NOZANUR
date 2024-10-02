@@ -10,7 +10,24 @@ export default withMT({
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
+    },
+    extend: {
+      colors: {
+        'sadia': '#FFFCF9',
+        'sadia-text': '#591A2B',
+        'sadia-text-fucus': '#861b38',
+        'dark-sadia': '#000000',
+      },
+    },
   },
   plugins: [],
   
