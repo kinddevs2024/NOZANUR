@@ -44,7 +44,7 @@ Masige : ${masiga}
       <div className=" container  h-full  text-black dark:text-white duration-300 flex justify-center items-center  m-auto   gap-4  ">
         <form className="mt-8 mb-2  w-full flex flex-col">
           <div className='flex justify-center items-center  w-full rounded-full  mb-5'>
-            <img className=' rounded-full  w-60' src="src/image.png" alt="sadia logo" />
+            <img className=' rounded-full  w-60' src="https://raw.githubusercontent.com/kinddevs2024/Sadia-Contact/refs/heads/main/src/image.png" alt="sadia logo" />
           </div>
           <div className=' flex justify-center items-center flex-col gap-5 m-3 '>
             <div className='flex flex-col  w-full'>
