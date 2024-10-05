@@ -44,7 +44,7 @@ Masige : ${masiga}
       <div className=" container  h-full  text-black dark:text-white duration-300 flex justify-center items-center  m-auto   gap-4  ">
         <form className="mt-8 mb-2  w-full flex flex-col">
           <div className='flex justify-center items-center  w-full rounded-full  mb-5'>
-            <img className=' rounded-full  w-60' src="https://cdn4.cdn-telegram.org/file/BBG1smfHjBJb43lmxYu4Fc8lwUhRFfbHqgcWuV58xHklFx36BHVdgY1551lSq1YojHjLRsdyISGYERKLrKwCsWgBC3zT6uPnJmsN2WCvzBcQdSr6Xawujg1P2icgACGcD19_e8yRjVAt7iu1YGtpjfPEHHrvK01bjJiihc0kh8ncNXPCJoWh_dLzZSqAH9OLJZVd41O2KsCEMCHjasJuGwcxizSf4VrnsQ-ei0zsDQLrTv9U1eo0_um_AVVsmr4gBG5C3X4JQ12lhzMISJjo2Nf8oCyeqO1cAqH4IrU2CAyuyOd66OkmRnxk_4EwWYQTaxlT6r8bPHmfP8NJBWBI0Q.jpg" alt="sadia logo" />
+            <img className=' rounded-full  w-60' src="src/image.png" alt="sadia logo" />
           </div>
           <div className=' flex justify-center items-center flex-col gap-5 m-3 '>
             <div className='flex flex-col  w-full'>
